@@ -1,0 +1,6 @@
+# Ignore Docker volumes and build artifacts
+**/volume-data/
+**/data/
+**/target/
+**/logs/
+*.sock
