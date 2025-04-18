@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t username/inventory-ctse:latest ./inventory-service
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/inventory-ctse:latest ./inventory-service
 
       - name: Push Docker image
-        run: docker push username/inventory-ctse:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/inventory-ctse:latest
